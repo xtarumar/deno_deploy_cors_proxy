@@ -5,7 +5,7 @@ function addCorsIfNeeded(response: Response) {
   const headers = new Headers(response.headers);
 
   if (!headers.has("access-control-allow-origin")) {
-    headers.set("access-control-allow-origin", "*");
+    headers.set("access-control-allow-origin", "https://www.exxen.com");
   }
 
   return headers;
