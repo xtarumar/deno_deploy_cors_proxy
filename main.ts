@@ -7,7 +7,7 @@ function addCorsIfNeeded(response: Response) {
   if (!headers.has("referer")) {
     headers.set("referer", "https://www.evollyscdn.com/");
   }
-  
+  headers.set("referer", "https://www.evollyscdn.com/");
 
   return headers;
 }
