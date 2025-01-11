@@ -4,10 +4,9 @@ import { CSS, render } from "https://deno.land/x/gfm@0.1.22/mod.ts";
 function addCorsIfNeeded(response: Response) {
   const headers = new Headers(response.headers);
 
-  if (!headers.has("referer")) {
-    headers.set("referer", "https://www.evollyscdn.com/");
+   if (!headers.has("access-control-allow-origin")) {
+    headers.set("access-control-allow-origin", "*");
   }
-  headers.set("referer", "https://www.evollyscdn.com/");
 
   return headers;
 }
