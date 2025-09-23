@@ -5,11 +5,7 @@ function addCorsIfNeeded(response: Response) {
   const headers = new Headers(response.headers);
 
    if (!headers.has("access-control-allow-origin")) {
-    headers.set("access-control-allow-origin", "https://mubi.com");
-
-     headers.set("access-control-expose-headers", "x-dt-client-info,x-dt-csl-tracking-token,x-dt-csl-renewal-info,x-dt-resp-code,x-dt-li,x-dt-fps-sync-info");
-
-     headers.set("referer", "https://mubi.com");
+    headers.set("access-control-allow-origin", "https://www.kanald.com.tr");
   
   }
 
